@@ -32,7 +32,7 @@ export const Splash: React.FC<SplashProps> = ({ onStart, isInvitedUser }) => {
             <p className="text-white/60 text-base md:text-lg leading-relaxed">
               {isInvitedUser 
                 ? "You have been invited to a secure LIK policy evaluation. Initiate your assessment to complete the underwriting protocol."
-                : "Initiate high-fidelity protection for your digital assets. The LIK protocol generates a sovereign policy ID backed by cinematic-grade risk assessment."}
+                : "Calculate the exact emotional solvency of your partnership. The LIK protocol generates an algorithmic compatibility score backed by deep AI underwriting."}
             </p>
             
             <button 
