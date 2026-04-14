@@ -1,8 +1,32 @@
+# Node / React / Vite
 node_modules/
-build/
 dist/
+dist-ssr/
+build/
 coverage/
-.DS_Store
-*.log
-.env*
+*.local
+
+# Environment Variables
+.env
+.env.*
 !.env.example
+
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+alembic.ini.bak
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.log
