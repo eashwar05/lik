@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+@theme {
+  --color-midnight: #020617;
+  --color-neon-lime: #BEF264;
+  --color-vibrant-fuchsia: #D946EF;
+  
+  --font-oswald: "Oswald", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-midnight text-white font-inter selection:bg-neon-lime selection:text-midnight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  }
+  
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(190, 242, 100, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .cinematic-glow {
+    filter: drop-shadow(0 0 20px rgba(190, 242, 100, 0.3));
+  }
+  
+  .fuchsia-glow {
+    filter: drop-shadow(0 0 20px rgba(217, 70, 239, 0.3));
+  }
+}
+
+/* Custom range input styling */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #BEF264;
+  cursor: pointer;
+  margin-top: -8px;
+  box-shadow: 0 0 15px #BEF264;
+  transition: all 0.2s ease;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #BEF264;
+}

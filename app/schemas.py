@@ -27,7 +27,21 @@ class AssessmentSubmitRequest(BaseModel):
 class AssessmentSubmitResponse(BaseModel):
     message: str
 
+class AssetResponse(BaseModel):
+    title: str
+    description: str
+    value: int
+    icon: str
+
+class RiskResponse(BaseModel):
+    title: str
+    description: str
+    value: int
+    icon: str
+
 class PolicyResultsResponse(BaseModel):
-    final_score: float
-    assets: List[str]
-    risks: List[str]
+    score: float
+    summary: str
+    assets: List[AssetResponse]
+    risks: List[RiskResponse]
+    consistencyScore: float

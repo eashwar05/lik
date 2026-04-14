@@ -7,3 +7,7 @@ pydantic-settings
 alembic
 pytest
 pytest-asyncio
+python-dotenv
+httpx
+groq
+slowapi

@@ -59,7 +59,7 @@ def run_tests():
         if response_results.status_code == 200:
             print("SUCCESS: Results retrieved!")
             results = response_results.json()
-            print(f"Final Score: {results['final_score']}")
+            print(f"Final Score: {results['score']}")
             print(f"Assets: {results['assets']}")
             print(f"Risks: {results['risks']}")
         else:
