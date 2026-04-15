@@ -54,7 +54,7 @@ export const LoadingScreen: React.FC = () => {
 
         <div className="text-center space-y-6 max-w-lg mx-auto">
           <h1 className="text-4xl md:text-5xl font-oswald font-bold text-white tracking-tight leading-none">
-            Underwriting <span className="text-neon-lime">Reveal</span>
+            Cosmic <span className="text-neon-lime">Alignment</span>
           </h1>
           <p className="text-white/60 text-lg leading-relaxed">
             Precision assessment in progress. Our AI is parsing through billions of data points to generate your custom LIK policy.
