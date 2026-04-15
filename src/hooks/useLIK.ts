@@ -63,10 +63,10 @@ export function useLIK() {
     try {
       const res = await fetch(`${API_BASE}/policy/${id || policyId}/results`);
       if (!res.ok) {
-         if (res.status === 400 || res.status === 404) return null; // Not ready or not found
+         if (res.status === 400 || res.status === 404) return null; // Not found
       }
       if (res.status === 202) {
-         return null; // Not ready yet
+         return { pending: true }; // Not ready yet
       }
       const data = await res.json();
       setResults(data);

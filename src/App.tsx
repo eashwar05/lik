@@ -41,8 +41,11 @@ export default function App() {
          return;
        }
        const data = await fetchResults(urlPolicyId);
-       if (data) {
+       if (data && !data.pending) {
          setScreen('results');
+       } else if (data && data.pending) {
+         setScreen('splash'); // Return to splash or could stay on a "waiting" screen
+         alert("Assessment secured. Waiting for underwriting engine to finalize results.");
        } else {
          setScreen('invalid');
        }
@@ -61,7 +64,7 @@ export default function App() {
      const data = await fetchResults(currentId);
      setIsChecking(false);
      
-     if (data) {
+     if (data && !data.pending) {
         setScreen('results');
      } else {
         alert("Policy is still generating or waiting for co-beneficiary signature.");

@@ -54,12 +54,12 @@ def run_compatibility_algorithm(user_a_answers: List[int], user_b_answers: List[
         
         weighted_diff_sum += weight * diff
         
-        # Asset: diff <= 10 on a question with weight >= 0.07
-        if diff <= 10 and weight >= 0.07:
+        # Asset: diff <= 15 on any question
+        if diff <= 15:
             assets.append(i)
             
-        # Risk: diff >= 70 on any question
-        if diff >= 70:
+        # Risk: diff >= 45 on any question
+        if diff >= 45:
             risks.append(i)
             
     base_score = 100.0 - weighted_diff_sum
